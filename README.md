@@ -34,7 +34,10 @@ Performance Tuning • AWR Analysis • Query Optimization • High Availability
 **Oracle** → RAC, Data Guard, ASM, AWR Analysis, PL/SQL  
 **PostgreSQL** → MVCC, Replication, Extensions, VACUUM tuning  
 **MongoDB** → Sharding, Replica Sets, Aggregation Framework  
-**ClickHouse** → MergeTree, Compression, PREWHERE, Materialized Views
+**ClickHouse** → MergeTree, Compression, PREWHERE, Materialized Views  
+**MySQL** → InnoDB, Replication, Performance Schema, Query Optimization  
+**MariaDB** → Galera Cluster, ColumnStore, MaxScale, XtraDB  
+**SQL Server** → Always On, Query Store, T-SQL, Index Tuning
 
 ---
 
