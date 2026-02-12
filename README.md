@@ -1,6 +1,6 @@
 # 👋 Fellipe Oliveira Morsolin
 
-**Database Solutions Architect | 13+ anos em Oracle, PostgreSQL, MongoDB & ClickHouse**
+**Database Solutions Architect | 13+ anos em Oracle, PostgreSQL, Mysql, MongoDB & ClickHouse**
 
 🎯 Especialista em **performance tuning**, **alta disponibilidade** e **automação DBA**  
 🏢 Nexxera • Florianópolis, SC, Brazil
