@@ -10,28 +10,38 @@
 ## 🔧 Stack Principal
 
 **Databases:**  
-Oracle (RAC, Data Guard, ASM) • PostgreSQL • MongoDB (Sharding, Replica Sets) • ClickHouse • MySQL/MariaDB • SQL Server
+`Oracle` `PostgreSQL` `MongoDB` `ClickHouse` `MySQL` `MariaDB` `SQL Server`
 
 **Especialidades:**  
-Performance Tuning • AWR Analysis • Query Optimization • High Availability • Automation
+Performance Tuning • AWR Analysis • Query Optimization • High Availability • Sharding & Replication • Automation
 
 **DevOps & Tools:**  
-Python • Bash/PowerShell • Git • Zabbix • GitHub Copilot
+`Python` `Bash` `PowerShell` `Git` `Zabbix` `Docker` `GitHub Copilot`
 
 ---
 
 ## 💼 Foco Atual
 
-- 🚀 Implementação de **Pattern-Based Architecture** para operações DBA
-- 🧠 Sistema de **Knowledge Management** com ChromaDB
-- 📊 Integração **Zabbix + Database Analytics**
-- 🤖 Automação DBA com **AI-Powered Agents** (16 personas especializadas)
+- 🚀 **Pattern-Based Architecture** - Zero invenção, 100% baseado em ambientes reais
+- 🧠 **Knowledge System** - ChromaDB + 16 AI-Powered Agent Personas
+- 📊 **Database Analytics** - Integração Zabbix + métricas de performance
+- 🤖 **DBA Automation** - Workflows inteligentes com GitHub Copilot
 
 ---
 
-## 📊 GitHub Stats
+## 🛠️ Experiência Técnica
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=fellipemorsolin91&show_icons=true&theme=tokyonight&hide_border=true)
+**Oracle** → RAC, Data Guard, ASM, AWR Analysis, PL/SQL  
+**PostgreSQL** → MVCC, Replication, Extensions, VACUUM tuning  
+**MongoDB** → Sharding, Replica Sets, Aggregation Framework  
+**ClickHouse** → MergeTree, Compression, PREWHERE, Materialized Views
+
+---
+
+## 📈 Projetos Destacados
+
+🗄️ **[DBA-WORKSPACE](https://github.com/fellipemorsolin91/DBA-WORKSPACE)** - Multi-Platform Database Operations  
+• 16 personas especializadas • 7 SGBDs suportados • ChromaDB knowledge engine
 
 ---
 
