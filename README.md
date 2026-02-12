@@ -1,4 +1,4 @@
-# 👋 Fellipe Morsolin
+# 👋 Fellipe Oliveira Morsolin
 
 **Database Solutions Architect | 13+ anos em Oracle, PostgreSQL, MongoDB & ClickHouse**
 
