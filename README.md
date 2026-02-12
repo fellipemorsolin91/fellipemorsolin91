@@ -1,6 +1,6 @@
 # 👋 Fellipe Oliveira Morsolin
 
-**Database Solutions Architect | 13+ anos em Oracle, PostgreSQL, Mysql, MongoDB & ClickHouse**
+**Database Solutions Architect | 13+ anos em Oracle, PostgreSQL, MongoDB & ClickHouse**
 
 🎯 Especialista em **performance tuning**, **alta disponibilidade** e **automação DBA**  
 🏢 Nexxera • Florianópolis, SC, Brazil
@@ -60,28 +60,31 @@ Ambiente de trabalho inteligente com 16 personas especializadas AI + ChromaDB kn
 Sistema enterprise de auditoria automatizada para governança de acesso em ambiente multi-database
 
 **Desafio:**  
-Geração manual de relatórios de compliance (LGPD, auditoria interna) exigia **4-6 horas** de trabalho manual por ciclo:
-- Conexão individual em 30+ instâncias de bancos diferentes
+Geração manual de relatórios de compliance (LGPD, auditoria interna) exigia **até 1 semana (40h+)** de trabalho por ciclo:
+- Conexão individual em 39 instâncias de bancos diferentes
 - Extração manual de usuários, roles, grants e permissões
 - Consolidação em planilhas separadas por SGBD
 - Formatação e envio para áreas de segurança/compliance
+- Alto risco de erro humano e omissões
+- Processo não repetível nem auditável de forma confiável
 
 **Solução:**  
-Automação completa end-to-end com Python + drivers nativos multi-SGBD
+Automação completa end-to-end com detection automática de SGBDs e execução de queries específicas por tecnologia
 
-**Stack:** `Python` `Oracle` `PostgreSQL` `MongoDB` `MySQL` `CSV Automation`  
-**Ambientes:** 30+ instâncias em produção (5 MySQL, 15 PostgreSQL, 10 Oracle, 4 MongoDB)
+**Stack:** `Python` `Oracle` `PostgreSQL` `MongoDB` `MySQL` `MariaDB` `CSV Automation`  
+**Ambientes:** 39 instâncias em produção (5 MySQL, 22 PostgreSQL, 4 Oracle, 4 MariaDB, 4 MongoDB)
 
 **Resultados:**
-- ⏱️ **Tempo:** 4-6 horas → **15 minutos** (redução de **95%**)
-- 📊 **Precisão:** 100% (eliminação de erros humanos em consolidação)
-- 🔄 **Frequência:** Mensal → On-demand (sob demanda imediata)
-- 📈 **Escalabilidade:** Suporta novos SGBDs sem refatoração
+- ⏱️ **Tempo:** 1 semana (40h+) → **20 minutos** (redução de **98%**)
+- 📊 **Precisão:** Risco de erro alto → Praticamente zero
+- 🔄 **Frequência:** Trimestral/semestral → Diária/semanal sob demanda
+- 📈 **Escalabilidade:** Estrutura expansível para novos ambientes
 
 **Impacto:**
-- Compliance proativa com relatórios atualizados sempre disponíveis
-- Redução de riscos de auditoria (dados sempre atualizados)
-- Liberação de 4-6h/mês de trabalho manual para atividades estratégicas
+- Melhoria na governança e conformidade de acessos
+- Geração de relatórios auditáveis com histórico automatizado
+- Liberação de tempo operacional para tarefas estratégicas
+- Notificação automática por e-mail integrado
 
 ---
 
@@ -89,90 +92,110 @@ Automação completa end-to-end com Python + drivers nativos multi-SGBD
 Ferramenta de análise instantânea para verificação de usuários/schemas em infraestrutura multi-database
 
 **Desafio:**  
-Atendimento de chamados (GA, GDV, GMA) exigia verificação manual de existência de usuários:
-- **Processo anterior:** 30-45 minutos por análise
-  - Consultar documentação de hosts (5-10 min)
-  - Conectar manualmente em cada instância (15-20 min)
-  - Executar queries específicas por SGBD (5-10 min)
-  - Consolidar resultados em texto/email (5 min)
-- **Frequência:** 15-20 solicitações/mês = **8-15 horas/mês**
+Atendimento de chamados (GA, GDV, GMA, INF) e demandas via Hangouts exigia verificação manual de existência de usuários:
+- **Processo anterior:** 20 a 60 minutos por análise
+  - Conexões diretas em cada instância de forma sequencial
+  - Execução de queries específicas por SGBD (Oracle, PostgreSQL, MySQL, MariaDB, MongoDB)
+  - Dificuldade em detectar inconsistências rapidamente
+  - Alto risco de erro humano e omissão de instâncias
+- **Processo não auditável nem padronizado**
 
 **Solução:**  
-Script Python orquestrador com execução paralela em todos os bancos
+Módulo automatizado Python com execução paralela e geração de relatórios padronizados
 
-**Stack:** `Python` `Multi-Threading` `Oracle cx_Oracle` `psycopg2` `pymongo` `MySQL Connector`  
-**Cobertura:** 30+ servers (PRD + QA + DEV + TST)
+**Stack:** `Python` `Multi-Threading` `Oracle cx_Oracle` `psycopg2` `pymongo` `MySQL Connector` `MariaDB`  
+**Cobertura:** Múltiplas instâncias heterogêneas (PRD + QA + DEV + TST)
 
 **Resultados:**
-- ⚡ **Tempo:** 30-45 min → **<2 minutos** (redução de **95%**)
-- 📋 **Output:** Relatório consolidado automático (txt) com status por servidor
-- 🎯 **Precisão:** 100% - varre TODAS as instâncias sem exceção
-- 🔄 **Reusabilidade:** Único comando para qualquer usuário
+- ⚡ **Tempo:** 20-60 min → **~5 segundos** (redução de **~99,8%**)
+- 📋 **Output:** Arquivo .txt com resultados consolidados automático
+- 🎯 **Precisão:** Risco alto → Praticamente zero
+- 🔄 **Frequência:** Esporádica → Diária ou sob demanda
 
 **Exemplo de uso:**
 ```bash
-python user_checker.py zabbix
-# Output: Relatório em <2 min com status em 30+ servidores
+python user_checker.py <username>
+# Output: Relatório em ~5 segundos com status em todas as instâncias
 ```
 
 **Impacto:**
-- **8-15 horas/mês** economizadas em análises manuais
-- SLA de atendimento reduzido drasticamente
-- Suporte a decisões rápidas (remover acessos, validar deployments)
+- Validação imediata de usuários e schemas em múltiplos SGBDs
+- Aplicação direta em chamados GA, GDV, GMA, INF e demandas via Hangouts
+- Processo auditável, reproduzível e facilmente expansível
+- Exemplo real: GDV-14373
 
 ---
 
 ### ⚙️ **Oracle Roles & Access Automation Framework**
-Framework de padronização e provisionamento automático de acessos Oracle com geração dinâmica de grants/synonyms
+Framework de padronização e provisionamento automático de acessos Oracle com triggers e geração dinâmica de grants/synonyms
 
 **Desafio:**  
-Criação manual de roles e acessos em schemas Oracle apresentava riscos:
-- **Processo anterior:** 20-30 minutos por schema
-  - Definição manual de grants objeto por objeto (10-15 min)
-  - Criação manual de synonyms no schema de aplicação (5-10 min)
-  - Testes de validação (5 min)
-  - Risco de esquecimento de objetos (erros em produção)
-- **Inconsistência:** Padrões diferentes entre schemas/ambientes
-- **Frequência:** 3-5 novos schemas/mês = **2-3 horas/mês** + retrabalho
+Criação manual de roles e acessos em schemas Oracle apresentava riscos operacionais e de governança:
+- Grants diretos sobre tabelas/sequences geravam **locks DDL** em alta concorrência (ambiente MERCANTIL)
+- Risco de esquecimento de objetos em deploys (erros em produção)
+- Inconsistência de padrões entre schemas e ambientes (TST, QAI, QAE, PRD)
+- Processo manual de concessão objeto por objeto
+- Dependência de intervenção manual pós-deploy
+- Pipelines de CI/CD não previsíveis
 
 **Solução:**  
-Sistema centralizado com templates PL/SQL + automação Shell Script
+Arquitetura baseada em roles padronizadas + triggers automáticas que monitoram criação de objetos
 
-**Stack:** `Oracle PL/SQL` `Shell Script` `Automation Framework` `Template-Based`  
+**Stack:** `Oracle PL/SQL` `Triggers` `Oracle Scheduler Jobs` `Shell Script` `Template-Based`  
 **Ambientes:** Oracle 11g + 19c (INT)
 
 **Arquitetura:**
-- Roles padronizadas: `ROLE_<SCHEMA>_R` (read-only), `ROLE_<SCHEMA>_RW` (read-write), `ROLE_<SCHEMA>_APP` (application)
-- Geração automática de grants para TODOS os objetos existentes
-- Criação automática de synonyms no schema de aplicação
-- HOW-TO documentado para replicação
+- **Roles padronizadas:** `ROLE_<SCHEMA>_R` (read-only), `ROLE_<SCHEMA>_RW` (read-write), `ROLE_<SCHEMA>_APP` (application)
+- **Triggers automáticas:** Monitoram criação de tabelas, views, materialized views, sequences, packages, functions, procedures
+- **Jobs Oracle Scheduler:** Executam grants e synonyms 5 segundos após criação do objeto, depois se autodestroem
+- **Automação completa:** Schema de aplicação mantém acesso atualizado sem intervenção manual
 
-**Resultados:**
-- ⏱️ **Tempo:** 20-30 min → **<5 minutos** (redução de **83%**)
-- 🎯 **Erros:** 100% eliminados (nenhum objeto esquecido)
-- 📐 **Padronização:** 100% consistência entre schemas/ambientes
-- 🔄 **Reusabilidade:** Template aplicável a qualquer novo schema
+**Ganhos técnicos e operacionais:**
+
+**1. Eliminação de bloqueios DDL:**
+- Permissões aplicadas apenas às roles (não às estruturas físicas)
+- Zero locks em objetos de dados (eliminação completa de contenções)
+
+**2. Controle centralizado:**
+- Todos os privilégios nas roles (revogações/restaurações imediatas)
+- Backup completo permite restauração a qualquer momento
+
+**3. Redução de erro humano:**
+- Toda nova estrutura recebe automaticamente privilégios e synonyms corretos
+- Zero necessidade de ajustes manuais pós-deploy
+
+**4. Estabilidade CI/CD:**
+- Pipelines previsíveis e reprodutíveis
+- Schema de aplicação com acesso completo após cada deploy
+
+**5. Governança e escalabilidade:**
+- Atribuir usuário a role = único passo necessário para acesso
+- Facilita auditorias e padroniza entre ambientes
 
 **Exemplo de deployment:**
 ```sql
 @create_roles_and_grants.sql SCHEMA_NAME
--- Output: Roles criadas + Grants aplicados + Synonyms gerados em <5 min
+-- Output: Roles criadas + Grants automáticos via triggers + Synonyms gerados
 ```
 
+**Resultado real (antes/depois):**
+- **Antes:** 60 grants diretos em usuários na tabela PAG_LOTE
+- **Depois:** 9 grants centralizados nas 3 roles + 22 usuários com acesso via roles
+
 **Impacto:**
-- **2-3 horas/mês** economizadas + eliminação de retrabalho
 - Zero incidentes de "acesso não funciona" pós-deployment
-- Onboarding de novos schemas 83% mais rápido
-- Compliance: auditoria facilitada (padrões documentados)
+- Integração contínua, estável e segura entre schemas de dados e aplicação
+- Compliance: auditoria facilitada com padrões documentados e rastreáveis
+- Modelo replicável para qualquer novo schema Oracle
 
 ---
 
 ## 📊 Resumo de Impacto
 
-**Economia total mensal:** ~**15-24 horas** em automações  
-**Redução de erros:** **100%** em processos automatizados  
-**ROI:** Frameworks reutilizáveis em múltiplos projetos  
-**Escalabilidade:** Soluções suportam crescimento sem refatoração
+**Economia de tempo operacional mensal:** ~**40+ horas** em automações  
+**Redução de erros:** **~99%** em processos automatizados  
+**Escalabilidade:** Soluções suportam crescimento sem refatoração  
+**Governança:** Processos auditáveis e reproduzíveis
 
 ---
 
