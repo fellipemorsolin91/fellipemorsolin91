@@ -40,8 +40,45 @@ Performance Tuning • AWR Analysis • Query Optimization • High Availability
 
 ## 📈 Projetos Destacados
 
-🗄️ **[DBA-WORKSPACE](https://github.com/fellipemorsolin91/DBA-WORKSPACE)** - Multi-Platform Database Operations  
-• 16 personas especializadas • 7 SGBDs suportados • ChromaDB knowledge engine
+### 🗄️ **[DBA-WORKSPACE](https://github.com/fellipemorsolin91/DBA-WORKSPACE)** 
+Multi-Platform Database Operations Framework  
+`16 personas especializadas` • `7 SGBDs` • `ChromaDB knowledge engine` • `Pattern-based architecture`
+
+---
+
+### 🔐 **Multi-Database Audit Reports** `INF-69171`
+Sistema automatizado de auditoria e compliance para governança de acesso  
+**Impacto:** Redução de 90% no tempo de geração de relatórios de auditoria  
+**Tecnologias:** `Python` `Oracle` `PostgreSQL` `MongoDB` `MySQL`  
+**Escopo:** 30+ instâncias em produção, relatórios consolidados para áreas de segurança
+
+- Automação completa de extração de usuários e permissões
+- Geração de relatórios CSV para compliance (LGPD, auditoria interna)
+- Integração com 4 SGBDs diferentes em ambiente multi-instance
+
+---
+
+### 🔍 **User Existence Checker** `INF-70174`
+Verificador multi-database de usuários e schemas para atendimento de chamados  
+**Impacto:** Análise em 30+ bancos executada em < 2 minutos (antes: 30+ minutos manual)  
+**Tecnologias:** `Python` `Multi-SGBD` `Automação`  
+**Casos de uso:** Chamados GA, GDV, GMA, INF, atendimentos on-demand
+
+- Busca automática em todas as instâncias de bancos de dados
+- Relatório consolidado txt com status (existe/não existe) por servidor
+- Suporte a Oracle, PostgreSQL, MongoDB, MySQL (ambientes PRD/QA/DEV)
+
+---
+
+### ⚙️ **Oracle Roles & Synonyms Automation** `INF-70196`
+Padronização e automação de roles de acesso com geração dinâmica de grants/synonyms  
+**Impacto:** Redução de erros manuais em 100%, deploy de novas roles em < 5 minutos  
+**Tecnologias:** `Oracle PL/SQL` `Shell Script` `Automação DBA`  
+**Ambientes:** Oracle 11g e 19c (INT)
+
+- Sistema centralizado de criação de roles padronizadas (R, RW, APP)
+- Geração automática de grants e synonyms para schemas de aplicação
+- Implementação HOW-TO para replicação em novos schemas
 
 ---
 
